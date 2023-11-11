@@ -1,0 +1,28 @@
+.drawer {
+  position: absolute;
+  background-color: red;
+  height: 100dvh;
+  width: var(--drawerWidth);
+  transform: translateX(var(--drawerStartPos));
+  transition: transform 300ms ease-in-out;
+
+  --drawerWidth: 35%;
+  --drawerStartPos: 0;
+  --drawerEndPos: calc(var(--drawerWidth) - 100%);
+
+  &.__close {
+    transform: translateX(var(--drawerEndPos));
+    transition: transform 300ms ease-in-out;
+  }
+
+  .content {
+    padding: var(--padding);
+    display: flex;
+    justify-content: flex-end;
+    button {
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
