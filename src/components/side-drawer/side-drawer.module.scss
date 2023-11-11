@@ -10,7 +10,7 @@
   --drawerStartPos: 0;
   --drawerEndPos: calc(var(--drawerWidth) - 100%);
 
-  &.__close {
+  &._close {
     transform: translateX(var(--drawerEndPos));
     transition: transform 300ms ease-in-out;
   }

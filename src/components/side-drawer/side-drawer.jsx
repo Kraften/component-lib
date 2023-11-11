@@ -9,7 +9,11 @@ const SideDrawer = () => {
   };
 
   return (
-    <div className={`${!isOpen && styles.__close} ${styles.drawer}`}>
+    <div
+      className={
+        isOpen ? `${styles.drawer}` : `${styles.drawer} ${styles._close}`
+      }
+    >
       <div className={styles.content}>
         <button onClick={changeDrawer}>X</button>
       </div>
