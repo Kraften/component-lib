@@ -10,6 +10,19 @@
   --padding: 1.5rem;
 }
 
+img {
+  max-width: 100%; //Stops images from overflowing.
+  height: auto; // Keeps the aspect ration of original image.
+  vertical-align: middle; // Like display: block;.
+  font-style: italic; // If image does not load the alt. text is different from other text.
+
+  // These two styles are used when you want to load an image on a slow network, it will load the low res img first then the full image.
+  //<img src='img.jpg' style='background-image: url(img-lowres.jpg)'
+  // https://csswizardry.com/2023/09/the-ultimate-lqip-lcp-technique/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
